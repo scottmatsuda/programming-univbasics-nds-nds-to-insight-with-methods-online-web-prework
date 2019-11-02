@@ -1,3 +1,4 @@
+require 'pp'
 require 'directors_database'
 
 # Write a method that, given an NDS creates a new Hash
@@ -13,5 +14,5 @@ end
 # Find a way to accumulate the :worldwide_grosses and return that Integer
 # using director_data as input
 def gross_for_director(director_data)
-  p director_data
+  pp director_data
 end
