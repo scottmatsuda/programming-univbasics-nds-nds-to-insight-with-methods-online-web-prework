@@ -8,14 +8,16 @@ require 'directors_database'
 
 def directors_totals(nds)
   result = {}
+  nil
   
   row_index = 0
   while row_index < nds.length do
-    result[nds][row_index][:name] = gross_for_director(nds[row_index])
+    current_director = nds[row_index][:name]
+    result[current_director] = gross_for_director(nds[row_index])
     row_index += 1
   end
   
-  return result
+ result
 end
 
 # Find a way to accumulate the :worldwide_grosses and return that Integer
